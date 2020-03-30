@@ -1,6 +1,6 @@
 "use strict"
-const Node = require('./node.js')
-class LinkedList{
+const Node = require('./node')
+module.exports = class LinkedList{
     constructor() {
         this.head = null
     }
@@ -158,35 +158,3 @@ class LinkedList{
         }
     }
 }
-
-//
-let ll = new LinkedList()
-ll.insertAtHead(40)
-ll.insertAtHead(30)
-ll.insertAtHead(20)
-ll.insertAtHead(10)
-
-console.log(ll.print())
-console.log(ll.getLength())
-ll.deleteAtHead()
-console.log(ll.print())
-ll.deleteAtTail()
-console.log(ll.print())
-ll.insertAtPosition(1,35)
-ll.insertAtPosition(2,55)
-ll.insertAtPosition(0,5)
-console.log(ll.print())
-ll.deleteInNumber(30)
-ll.deleteInNumber(20)
-ll.deleteInNumber(100)
-ll.deleteInNumber(55)
-console.log(ll.print())
-console.log(ll.find(20))
-console.log(ll.find(10))
-console.log(ll.findIndex(1))
-console.log(ll.findIndex(99))
-console.log(ll.isEmpty())
-
-
-
-
