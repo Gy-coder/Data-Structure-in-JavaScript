@@ -11,6 +11,7 @@ function Remove(arr,k){
     for(let j=k;j<arr.length;j++){
         arr[j] = arr[j+1]
     }
+    arr.length-=k
     return arr
 }
 
