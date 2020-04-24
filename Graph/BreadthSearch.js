@@ -49,10 +49,10 @@ function bfs_search(g){
 }
 
 
-function bfs_search_helper(g, i, visited, obj) {
+function bfs_search_helper(g, source, visited, obj) {
     let queue = new Queue()
-    queue.enqueue(i)
-    visited[i] = true
+    queue.enqueue(source)
+    visited[source] = true
     while(!queue.isEmpty()) {
         let CurrentNode = queue.dequeue()
         obj.result += String(CurrentNode)

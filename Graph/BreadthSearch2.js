@@ -47,17 +47,17 @@ function bfs_search(g){
 }
 
 
-function bfs_search_help(g, i, visited, obj) {
+function bfs_search_help(g, source, visited, obj) {
     let queue = new Queue()
-    queue.enqueue(i)
-    visited[i] = true
+    queue.enqueue(source)
+    visited[source] = true
     while(!queue.isEmpty()){
         let CurrentNode = queue.dequeue()
         obj.result += String(CurrentNode)
         for(let j=0;j<g.vertices;j++){
             if(visited[j] === false && visited[CurrentNode] === false && g.list[CurrentNode][j] === 1){
                 queue.enqueue(j)
-                visited[i] = true
+                visited[source] = true
             }
         }
     }
